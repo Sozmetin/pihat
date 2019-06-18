@@ -1,0 +1,36 @@
+from sense_hat import SenseHat
+from time import sleep
+import random
+sense = SenseHat()
+yellow = (255,255,0)
+blue = (0,0,255)
+pink = (255,0,255)
+cyan = (0,255,255)
+green = (0,255,0)
+raspberry = (255,0,125)
+dead = (0,0,0)
+white = (255,255,255)
+speed = 1
+message = "Hello World!"
+while True:
+    r = random.randint(0,255)
+    s = random.randint(0,255)
+    t = random.randint(0,255)
+    sense.show_letter("H",(r,s,t))
+    r = random.randint(0,255)
+    s = random.randint(0,255)
+    t = random.randint(0,255)
+    sleep(1)
+    sense.show_letter("O",(s,t,r))
+    r = random.randint(0,255)
+    s = random.randint(0,255)
+    t = random.randint(0,255)
+    sleep(1)
+    sense.show_letter("E",(t,r,s))
+    r = random.randint(0,255)
+    s = random.randint(0,255)
+    t = random.randint(0,255)
+    sleep(1)
+    sense.show_letter("!",(t,r,s))
+    sleep(1)
+    sense.clear()
